@@ -20,6 +20,10 @@ const Home = () => (
       />
     </Head>
     <div className="container mx-auto">
+      <img
+        src="/Districts-Mobile-v1@2x.jpg"
+        className="h-full w-full absolute inset-0 z-10 "
+      />
       <StickyNav />
       <LandingMessage />
       <HowItWorks />
