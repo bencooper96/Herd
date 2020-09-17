@@ -20,10 +20,11 @@ const Home = () => (
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
       ></meta>
     </Head>
-    <div className="container mx-auto">
+    <div className="container mx-auto" style={{ minHeight: "550px" }}>
       <img
         src="/Districts-Mobile-v1@2x.jpg"
-        className="h-screen w-full absolute inset-0 z-10 "
+        className="h-full w-full absolute inset-0 z-10"
+        style={{ minHeight: "550px" }}
       />
       <StickyNav />
       <LandingMessage />
