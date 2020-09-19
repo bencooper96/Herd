@@ -18,16 +18,10 @@ html {
 
 .primary-bg {
   background-color: #faffff;
-}
-
-.secondary-bg {
-  background-color: #282832;
-}
-
-.primary-text {
   color: #282832;
 }
 
-.secondary-text {
-  color: #faffff;
+.secondary-bg {
+  background-color: #d4e2e2;
+  color: #282832;
 }

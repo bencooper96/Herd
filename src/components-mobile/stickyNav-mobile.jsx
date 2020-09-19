@@ -1,6 +1,6 @@
 import React from "react";
 
-const StickyNav = () => {
+function StickyNav() {
   return (
     <div className="sticky top-0 z-0">
       <button className="float-right mx-5 my-2 w-1/4 text-xl call-to-action-btn">
@@ -8,6 +8,6 @@ const StickyNav = () => {
       </button>
     </div>
   );
-};
+}
 
 export default StickyNav;

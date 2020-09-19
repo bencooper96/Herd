@@ -4,7 +4,7 @@ class EmailForm extends Component {
   state = {};
   render() {
     return (
-      <form action="POST" className="w-full px-2 mx-auto mt-20 ">
+      <form action="POST" className="w-full px-2 mx-auto mt-20">
         <input
           className="w-full h-12 my-2 px-6 text-l font-thin italic rounded-full focus:outline-none border border-gray-800 appearance-none leading-normal"
           type="email"
