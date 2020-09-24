@@ -6,15 +6,17 @@ import Send from "./howItWorksContent/send";
 
 const HowItWorks = () => {
   return (
-    <div className="container primary-bg w-full px-4 pr-10 mb-20 ">
-      <p className="text-4xl font-bold">How it works</p>
-      <p className="text-xl font-regular">
+    <div className="w-full px-4 pr-10 mb-20 mt-20 primary-bg">
+      <p className="text-4xl md:text-5xl font-bold">How it works</p>
+      <p className="text-xl md:text-2xl font-regular mb-20 md:mb-10 ">
         You vocalize & vote; <br /> we pass it on.
       </p>
-      <Voice />
-      <Amplify />
-      <Connect />
-      <Send />
+      <div className="md:flex">
+        <Voice />
+        <Amplify />
+        <Connect />
+        <Send />
+      </div>
     </div>
   );
 };

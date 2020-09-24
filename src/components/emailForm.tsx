@@ -33,15 +33,23 @@ export default function EmailForm() {
         data;
         setSubmitting(false);
       })}
-      className="w-full px-2 mx-auto mt-20"
+      className="w-full mx-auto mt-40 sm:mt-10 md:mt-20 table mx-auto md:flex flex-wrap"
     >
       <input
-        className="w-full h-12 my-2 px-6 text-l font-thin italic rounded-full focus:outline-none border border-gray-800 appearance-none leading-normal"
+        className="md:w-3/5 w-full h-12 my-px px-6 text-l font-thin italic rounded-md focus:outline-none border border-gray-500 appearance-none leading-normal"
         type="email"
         name="email"
         placeholder="Enter your email address"
         ref={register({ required: true })}
       />
+
+      <button
+        type="submit"
+        disabled={submitting}
+        className="md:w-2/5 w-full h-12 px-6 my-px px-1 text-md font-regular call-to-action-btn"
+      >
+        Join the Herd.
+      </button>
       {/* Handles server error response from /api/auth & displays it under email */}
       {serverErrors ? (
         <ul className="text-red-600 px-5">
@@ -50,14 +58,6 @@ export default function EmailForm() {
           ))}
         </ul>
       ) : null}
-
-      <button
-        type="submit"
-        disabled={submitting}
-        className="h-16 w-full px-6 my-2 text-md font-regular call-to-action-btn"
-      >
-        Sign up to start shaping your community.
-      </button>
     </form>
   );
 }
