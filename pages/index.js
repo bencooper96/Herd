@@ -1,7 +1,8 @@
 // pages/index.jsx
-import MobileLayout from "../src/components/mobileLayout";
 import Head from "next/head";
+import MobileLayout from "../src/components/mobileLayout";
 import DesktopLayout from "../src/components/desktopLayout";
+import Slider from "../src/components/slider";
 
 const Home = () => (
   <div>
@@ -18,6 +19,8 @@ const Home = () => (
     </Head>
     <MobileLayout />
     <DesktopLayout />
+
+    {/* <Slider /> */}
   </div>
 );
 

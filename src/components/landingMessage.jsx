@@ -1,5 +1,5 @@
 import React from "react";
-import EmailForm from "./emailForm.tsx";
+import EmailForm from "./emailSignUp";
 
 const LandingMessage = () => {
   return (
@@ -7,7 +7,7 @@ const LandingMessage = () => {
       <div className="w-full table mx-auto mt-6 sm:hidden ">
         <p className="w-full text-5xl font-bold text-center">Herd</p>
         <p className="w-full text-2xl font-thin italic text-center -mt-4">
-          The digital town hall.
+          Your digital town hall.
         </p>
       </div>
 
@@ -24,7 +24,7 @@ const LandingMessage = () => {
             We're here so you're heard.
           </p>
           <p className="w-full lg:text-5xl text-4xl font-light text-left">
-            Lorem ipsum dolor sit amet, consectetur.
+            Local politics made easy, effective, & engaging.
           </p>
           <EmailForm />
         </div>
