@@ -9,7 +9,11 @@ function getRequestParams(email) {
   const DATACENTER = process.env.MAILCHIMP_API_KEY.split("-")[1];
 
   const url =
-    "https://${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}/members";
+    "https://" +
+    DATACENTER +
+    ".api.mailchimp.com/3.0/lists/" +
+    LIST_ID +
+    "/members";
   const data = {
     email_address: email,
     status: "subscribed",
@@ -30,7 +34,7 @@ export default async (req, res) => {
   }
   try {
     const { url, data, headers } = getRequestParams(email);
-
+    console.log(data);
     const response = await axios.post(url, data, { headers });
 
     //Success
