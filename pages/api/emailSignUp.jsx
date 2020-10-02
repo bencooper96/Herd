@@ -1,4 +1,5 @@
 //https://www.youtube.com/watch?v=Rzlop3Bgk1Q&ab_channel=UriKlar
+import axios from "axios";
 
 function getRequestParams(email) {
   const API_KEY = process.env.MAILCHIMP_API_KEY;
@@ -32,11 +33,10 @@ export default async (req, res) => {
   if (!email || !email.length) {
     return res.status(400).json({ error: "Please enter your email" });
   }
+
   try {
     const { url, data, headers } = getRequestParams(email);
-    console.log(data);
     const response = await axios.post(url, data, { headers });
-
     //Success
     return res.status(201).json({ error: null });
   } catch (error) {

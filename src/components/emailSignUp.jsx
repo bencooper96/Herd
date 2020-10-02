@@ -18,7 +18,7 @@ export default function EmailForm() {
   };
   return (
     <React.Fragment>
-      <div>
+      <div className="">
         <input
           className="md:w-3/5 w-full h-12 my-px px-6 text-l font-thin italic rounded-md focus:outline-none border border-gray-500 appearance-none leading-normal"
           type="email"
