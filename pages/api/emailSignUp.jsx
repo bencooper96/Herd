@@ -20,10 +20,10 @@ function getRequestParams(email) {
     status: "subscribed",
   };
 
-  const base64ApiKey = Buffer.from("Ben:${API_KEY}").toString("base64");
+  const base64ApiKey = Buffer.from("Ben:" + API_KEY).toString("base64");
   const headers = {
     "Content-Type": "application/json",
-    Authorization: "Basic ${base64ApiKey}",
+    Authorization: "Basic " + base64ApiKey,
   };
   return { url, data, headers };
 }
@@ -36,7 +36,9 @@ export default async (req, res) => {
 
   try {
     const { url, data, headers } = getRequestParams(email);
+    console.log(headers);
     const response = await axios.post(url, data, { headers });
+
     //Success
     return res.status(201).json({ error: null });
   } catch (error) {
