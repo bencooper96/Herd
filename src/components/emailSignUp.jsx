@@ -44,7 +44,7 @@ export default function EmailForm() {
         <p className="w-full mx-auto mt-1 text-red-600">{errorMessage}</p>
       )}
       {state == "SUCCESS" && (
-        <p className="w-full mx-auto mt-1 text-red-600">
+        <p className="w-full mx-auto mt-1 text-green-600">
           Great! We'll keep you updated!
         </p>
       )}
