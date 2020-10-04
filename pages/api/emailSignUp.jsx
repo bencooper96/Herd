@@ -17,9 +17,9 @@ function getRequestParams(email) {
     "/members";
   const data = {
     email_address: email,
-    firstname: Ben,
-    lastname: Cooper,
-    tags: "BetaTester",
+    // firstname: Ben,
+    // lastname: Cooper,
+    // tags: "BetaTester",
     status: "subscribed",
   };
 
@@ -39,7 +39,7 @@ export default async (req, res) => {
 
   try {
     const { url, data, headers } = getRequestParams(email);
-    const response = await axios.post(url, data, { headers });
+    const response = await axios.put(url, data, { headers });
 
     //Success
     return res.status(201).json({ error: null });
