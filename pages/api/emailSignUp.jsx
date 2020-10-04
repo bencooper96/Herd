@@ -17,6 +17,9 @@ function getRequestParams(email) {
     "/members";
   const data = {
     email_address: email,
+    firstname: Ben,
+    lastname: Cooper,
+    tags: "BetaTester",
     status: "subscribed",
   };
 
