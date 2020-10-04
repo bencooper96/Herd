@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import LandingMessage from "./landingMessage";
 import HowItWorks from "./howItWorks";
 import Vision from "./vision";
+import Footer from "./footer";
 
 const DesktopLayout = () => {
   return (
@@ -13,6 +14,7 @@ const DesktopLayout = () => {
         <LandingMessage />
         <HowItWorks />
         <Vision />
+        <Footer />
       </div>
     </div>
   );

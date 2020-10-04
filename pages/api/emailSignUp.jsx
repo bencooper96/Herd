@@ -36,7 +36,6 @@ export default async (req, res) => {
 
   try {
     const { url, data, headers } = getRequestParams(email);
-    console.log(headers);
     const response = await axios.post(url, data, { headers });
 
     //Success
@@ -44,7 +43,7 @@ export default async (req, res) => {
   } catch (error) {
     return res.status(400).json({
       error:
-        "Oops, something must have went wrong...send us an email at HeardByHerd@gmail.com to be added",
+        "Oops, something went wrong...send us an email at HeardByHerd@gmail.com to be added to the list",
     });
   }
 };
