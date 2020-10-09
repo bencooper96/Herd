@@ -4,10 +4,10 @@ const HIWTemplate = (props) => {
   const [resultState, setResultState] = useState(false);
 
   return (
-    <div className={"p-10 w-full md:w-2/3 float-" + props.position}>
+    <div className={"md:p-10 p-8 w-full md:w-2/3 sm:float-" + props.position}>
       <img
         src={props.mockupPath}
-        className="-mb-16 -mt-6 w-1/2 lg:w-1/3 mx-auto"
+        className="-mb-16 -mt-6 w-5/6 sm:w-1/2 lg:w-1/3 mx-auto"
       />
       <div className="bg-blue-300 pb-5 pt-16 rounded-lg">
         {/* <img src="./how-it-works/ _voice.jpg" className="mt-12 w-20 h-20" /> */}
