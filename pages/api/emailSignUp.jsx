@@ -1,5 +1,6 @@
 //https://www.youtube.com/watch?v=Rzlop3Bgk1Q&ab_channel=UriKlar
 import axios from "axios";
+var md5 = require("md5");
 
 function getRequestParams(email) {
   const API_KEY = process.env.MAILCHIMP_API_KEY;
@@ -17,9 +18,6 @@ function getRequestParams(email) {
     "/members";
   const data = {
     email_address: email,
-    // firstname: Ben,
-    // lastname: Cooper,
-    // tags: "BetaTester",
     status: "subscribed",
   };
 
@@ -33,20 +31,28 @@ function getRequestParams(email) {
 
 export default async (req, res) => {
   const { email } = req.body;
+  const { url, data, headers } = getRequestParams(email);
+
   if (!email || !email.length) {
     return res.status(400).json({ error: "Please enter your email" });
   }
-
   try {
-    const { url, data, headers } = getRequestParams(email);
-    const response = await axios.put(url, data, { headers });
-
-    //Success
-    return res.status(201).json({ error: null });
-  } catch (error) {
+    const userExists = await axios.get(url + "/" + md5(email), { headers });
     return res.status(400).json({
       error:
-        "Oops, something went wrong...send us an email at HeardByHerd@gmail.com to be added to the list",
+        "It looks like this email is already subscribed...we'll keep you updated",
     });
+  } catch {
+    try {
+      const response = await axios.post(url, data, { headers });
+
+      //Success
+      return res.status(201).json({ error: null });
+    } catch (error) {
+      return res.status(400).json({
+        error:
+          "Oops, something went wrong...send us an email at HeardByHerd@gmail.com to be added to the list",
+      });
+    }
   }
 };
