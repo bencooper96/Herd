@@ -1,9 +1,10 @@
 import React from "react";
 
 import StickyNav from "./stickyNavbar";
-import LandingMessage from "./landingMessage";
-import HowItWorks from "./howItWorks";
-import Vision from "./vision";
+import LandingMessage from "../landingMessage";
+import HowItWorks from "../howItWorks";
+import Vision from "../vision";
+import Footer from "../footer";
 
 const Layout = () => {
   return (
@@ -20,8 +21,9 @@ const Layout = () => {
         <div>
           <LandingMessage />
           <StickyNav />
-          <HowItWorks />
           <Vision />
+          <HowItWorks />
+          <Footer />
         </div>
       </div>
     </div>

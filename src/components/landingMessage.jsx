@@ -3,7 +3,7 @@ import EmailForm from "./emailSignUp";
 
 const LandingMessage = () => {
   return (
-    <div className="z-20 sm:h-full h-screen px-6" id="landing">
+    <div className="z-20 sm:h-full h-screen px-6 sm:bg-primary" id="landing">
       <div className="w-full table mx-auto mt-6 sm:hidden ">
         <p className="w-full text-5xl font-bold text-center">Herd</p>
         <p className="w-full text-2xl font-thin italic text-center -mt-4">
@@ -13,7 +13,7 @@ const LandingMessage = () => {
 
       <div className="sm:hidden text-center block ">
         <p className="w-full mt-10 text-5xl font-medium text-center ">
-          We're here so you're heard.
+          Local politics made easy, effective, & engaging.
         </p>
         <EmailForm />
       </div>

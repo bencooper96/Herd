@@ -1,10 +1,10 @@
 import React from "react";
 
-import Navbar from "./navbar";
-import LandingMessage from "./landingMessage";
-import HowItWorks from "./howItWorks";
-import Vision from "./vision";
-import Footer from "./footer";
+import Navbar from "../navbar";
+import LandingMessage from "../landingMessage";
+import HowItWorks from "../howItWorks";
+import Vision from "../vision";
+import Footer from "../footer";
 
 const DesktopLayout = () => {
   return (
@@ -12,8 +12,8 @@ const DesktopLayout = () => {
       <Navbar />
       <div>
         <LandingMessage />
-        <HowItWorks />
         <Vision />
+        <HowItWorks />
         <Footer />
       </div>
     </div>

@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
+import SignUpMessage from "../../src/components/signUpMessage";
+// import signUpBg from "../../public/signUpBg.png";
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
@@ -40,87 +42,90 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="bg-cover bg-district" style={{ minHeight: "110vh" }}>
       <Link href="/">
-        <button className="w-20 h-8 px-6 m-2 px-1 text-md font-regular bg-gray-400 shadow-lg rounded-lg">
+        <button className="w-20 h-8 px-6 m-2 px-1 text-md font-regular bg-gray-400 shadow-lg rounded-md">
           back
         </button>
       </Link>
-      <div className="container bg-gray-200 w-full md:w-3/5 lg:w-1/2 mx-auto p-10 my-8">
-        <label htmlFor="BackButton"></label>
-        <label htmlFor="FirstNameInput">
-          <input
-            className="w-3/5 h-12 my-px px-6 text-l font-thin italic rounded-md focus:outline-none border border-gray-500 appearance-none leading-normal"
-            type="name"
-            name="firstName"
-            value={firstName}
-            placeholder="First Name"
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </label>
-        <label htmlFor="LastNameInput">
-          <input
-            className="w-3/5  h-12 my-px px-6 text-l font-thin italic rounded-md focus:outline-none border border-gray-500 appearance-none leading-normal"
-            type="name"
-            name="lastName"
-            value={lastName}
-            placeholder="Last Name"
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </label>
-        <label htmlFor="zipCodeInput">
-          <input
-            className="w-3/5 h-12 my-px px-6 text-l font-thin italic rounded-md focus:outline-none border border-gray-500 appearance-none leading-normal"
-            type="text"
-            name="zipCode"
-            value={zipCode}
-            placeholder="Zip Code"
-            onChange={(e) => setZipCode(e.target.value)}
-          />
-        </label>
-
-        <label
-          htmlFor="betaToggle"
-          className="flex items-center cursor-pointer"
-        >
-          <div className="mr-3 text-gray-700 font-medium">
-            I want early access
-          </div>
-          <div className="relative">
+      <div className="container bg-gray-200 opacity-75 shadow-lg w-full md:w-3/5 mx-auto p-10 my-8 rounded-md">
+        <SignUpMessage />
+        <div className="lg:w-3/5 w-4/5 mx-auto">
+          <label htmlFor="BackButton"></label>
+          <label htmlFor="FirstNameInput">
             <input
-              id="betaToggle"
-              type="checkbox"
-              className="hidden"
-              name="betaTester"
-              checked={betaTester}
-              onChange={() => setBetaTester(!betaTester)}
+              className="w-full h-12 my-px px-6 text-l font-thin italic rounded-md focus:outline-none border border-gray-500 appearance-none leading-normal"
+              type="name"
+              name="firstName"
+              value={firstName}
+              placeholder="First Name"
+              onChange={(e) => setFirstName(e.target.value)}
             />
-            {/* Slider bg */}
-            <div className="toggle__line w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
-            {/* Slider dot */}
-            <div className="toggle__dot absolute w-6 h-6 bg-white rounded-full shadow inset-y-0 left-0"></div>
-          </div>
-        </label>
+          </label>
+          <label htmlFor="LastNameInput">
+            <input
+              className="w-full  h-12 my-px px-6 text-l font-thin italic rounded-md focus:outline-none border border-gray-500 appearance-none leading-normal"
+              type="name"
+              name="lastName"
+              value={lastName}
+              placeholder="Last Name"
+              onChange={(e) => setLastName(e.target.value)}
+            />
+          </label>
+          <label htmlFor="zipCodeInput">
+            <input
+              className="w-full h-12 my-px px-6 text-l font-thin italic rounded-md focus:outline-none border border-gray-500 appearance-none leading-normal"
+              type="text"
+              name="zipCode"
+              value={zipCode}
+              placeholder="Zip Code"
+              onChange={(e) => setZipCode(e.target.value)}
+            />
+          </label>
 
-        <button
-          className={
-            "w-3/5 h-12 px-6 my-px px-1 text-md font-regular call-to-action-btn "
-          }
-          type="button"
-          disabled={state === "Loading"}
-          onClick={subscribe}
-        >
-          Submit
-        </button>
-        {state == "ERROR" && (
-          <p className="w-full mx-auto mt-1 text-red-600">{errorMessage}</p>
-        )}
-        {state == "SUCCESS" && (
-          <p className="w-full mx-auto mt-1 text-green-600">
-            Great! We'll keep you updated
-            {/* {"betaTest: " + errorMessage} */}
-          </p>
-        )}
+          <label
+            htmlFor="betaToggle"
+            className="flex items-center cursor-pointer "
+          >
+            <div className="mr-3 text-gray-700 font-medium">
+              I want early access
+            </div>
+            <div className="relative">
+              <input
+                id="betaToggle"
+                type="checkbox"
+                className="hidden"
+                name="betaTester"
+                checked={betaTester}
+                onChange={() => setBetaTester(!betaTester)}
+              />
+              {/* Slider bg */}
+              <div className="toggle__line w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+              {/* Slider dot */}
+              <div className="toggle__dot absolute w-6 h-6 bg-white rounded-full shadow inset-y-0 left-0"></div>
+            </div>
+          </label>
+
+          <button
+            className={
+              "w-full h-12 px-6 my-px px-1 text-md font-regular call-to-action-btn "
+            }
+            type="button"
+            disabled={state === "Loading"}
+            onClick={subscribe}
+          >
+            Submit
+          </button>
+          {state == "ERROR" && (
+            <p className="w-full mx-auto mt-1 text-red-600">{errorMessage}</p>
+          )}
+          {state == "SUCCESS" && (
+            <p className="w-full mx-auto mt-1 text-green-600">
+              Great! We'll keep you updated
+              {/* {"betaTest: " + errorMessage} */}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );

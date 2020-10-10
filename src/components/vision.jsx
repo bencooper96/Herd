@@ -2,7 +2,7 @@ import React from "react";
 
 const Vision = () => {
   return (
-    <div className="bg-light-blue-gradient secondary-text w-full pt-32 px-4 pr-10 pb-40">
+    <div className="bg-primary bg-cover secondary-text w-full pt-32 px-4 pr-10 pb-40">
       <p className="text-4xl font-bold">The vision</p>
       <div>
         <p className="text-xl font-semibold pt-10">
