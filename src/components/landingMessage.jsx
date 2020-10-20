@@ -12,7 +12,7 @@ const LandingMessage = () => {
       </div>
 
       <div className="sm:hidden text-center block ">
-        <p className="w-full mt-10 text-5xl font-medium text-center ">
+        <p className="w-full mt-10 mb-5 text-4xl font-medium text-center ">
           Local politics made easy, effective, & engaging.
         </p>
         <EmailForm />
@@ -23,7 +23,7 @@ const LandingMessage = () => {
           <p className="w-full lg:text-6xl text-5xl font-medium text-left">
             We're here so you're heard.
           </p>
-          <p className="w-full lg:text-5xl text-4xl font-light text-left">
+          <p className="w-full mb-10 lg:text-5xl text-4xl font-light text-left">
             Local politics made easy, effective, & engaging.
           </p>
           <EmailForm />
