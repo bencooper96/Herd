@@ -1,5 +1,6 @@
 // pages/_app.jsx
 import "../styles/index.css";
+import 'swiper/swiper.scss';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
