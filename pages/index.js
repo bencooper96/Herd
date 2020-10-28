@@ -2,7 +2,6 @@
 import Head from "next/head";
 import MobileLayout from "../src/components/mobile/mobileLayout";
 import DesktopLayout from "../src/components/desktop/desktopLayout";
-import Slider from "../src/components/slider";
 
 const Home = () => (
   <div>
