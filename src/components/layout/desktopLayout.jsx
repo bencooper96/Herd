@@ -1,11 +1,11 @@
 import React from "react";
 
-import Navbar from "../navbar";
-import LandingMessage from "../landingMessage";
-import HowItWorks from "../howItWorks";
+import Navbar from "../landing/navbar";
+import LandingMessage from "../landing/landingMessage";
+import HowItWorks from "../howItWorks/howItWorks";
 import Vision from "../vision";
 import Footer from "../footer";
-import WhyHerd from "../whyHerd";
+import WhyHerd from "../whyHerd/whyHerd";
 
 const DesktopLayout = () => {
   return (

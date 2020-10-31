@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import HIWTemplate from "./hiwTemplate";
 
 const Send = () => {
   const [resultState, setResultState] = useState(false);

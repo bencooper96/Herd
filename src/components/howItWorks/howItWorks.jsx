@@ -1,5 +1,5 @@
 import React from "react";
-import HIWTabs from "./howItWorksContent/hiwTabs";
+import HIWTabs from "./hiwTabs";
 
 const HowItWorks = () => {
   return (

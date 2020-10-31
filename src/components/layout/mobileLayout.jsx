@@ -1,9 +1,10 @@
 import React from "react";
 
-import StickyNav from "./stickyNavbar";
-import LandingMessage from "../landingMessage";
-import HowItWorks from "../howItWorks";
+import StickyNav from "../landing/stickyNavbar";
+import LandingMessage from "../landing/landingMessage";
+import HowItWorks from "../howItWorks/howItWorks";
 import Vision from "../vision";
+import WhyHerd from "../whyHerd/whyHerd";
 import Footer from "../footer";
 
 const Layout = () => {
@@ -21,8 +22,9 @@ const Layout = () => {
         <div>
           <LandingMessage />
           <StickyNav />
-          <Vision />
+          <WhyHerd />
           <HowItWorks />
+          <Vision />
           <Footer />
         </div>
       </div>

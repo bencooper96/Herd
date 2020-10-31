@@ -1,7 +1,7 @@
 // pages/index.jsx
 import Head from "next/head";
-import MobileLayout from "../src/components/mobile/mobileLayout";
-import DesktopLayout from "../src/components/desktop/desktopLayout";
+import MobileLayout from "../src/components/layout/mobileLayout";
+import DesktopLayout from "../src/components/layout/desktopLayout";
 
 const Home = () => (
   <div>

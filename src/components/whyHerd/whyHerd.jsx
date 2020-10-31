@@ -1,27 +1,15 @@
 import React from "react";
-import ProfileCard from "./profileCard";
+import PeopleGallery from "./peopleGallery";
 
 const WhyHerd = () => {
   return (
-    <div className="bg-secondary bg-cover secondary-text w-full py-16 px-16">
-      <p className="text-4xl font-bold">Why we're here</p>
-      <div className="flex mt-10 mx-auto w-11/12 bg-primary p-5">
-        <ProfileCard
-          name="First Name"
-          quote="I use Herd as a way to make my voice heard. I know that my
-        representatives use this information to make their decisions"
-        />
-        <ProfileCard
-          name="First Name"
-          quote="I use Herd as a way to make my voice heard. I know that my
-        representatives use this information to make their decisions"
-        />
-        <ProfileCard
-          name="First Name"
-          quote="I use Herd as a way to make my voice heard. I know that my
-        representatives use this information to make their decisions"
-        />
-      </div>
+    <div className="bg-secondary bg-cover secondary-text w-full py-16 px-5 sm:px-16">
+      <p className="text-4xl font-bold text-center sm:text-left">
+        Why we're here
+      </p>
+
+      <PeopleGallery />
+
       <div>
         <p className="text-xl font-semibold pt-10">Because local matters</p>
         <p className="text-l font-regular pt-2">
