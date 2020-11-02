@@ -8,7 +8,7 @@ const WhyHerd = () => {
         Why we're here
       </p>
 
-      <PeopleGallery />
+      {/* <PeopleGallery /> */}
 
       <div>
         <p className="text-xl font-semibold pt-10">Because local matters</p>
