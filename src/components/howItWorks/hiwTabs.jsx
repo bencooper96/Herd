@@ -38,16 +38,15 @@ class HIWTabs extends Component {
           </TabList>
 
           <TabPanel>
-            <p className="text-l md:text-xl py-2 px-6 text-left my-4 sm:my-0">
+            <p className="text-l md:text-2xl py-2 px-6 text-left my-4 sm:my-0">
               Your ideas, contributing to the collective, local voice.
-              <br /> Synthesized for maximum impact.
-              <br /> Sent to all the right people.
+              Synthesized for maximum impact. Sent to all the right people.
             </p>
             <HIWDesktopConstituent />
             <HIWMobileConstituent />
           </TabPanel>
           <TabPanel>
-            <p className="text-l md:text-xl py-2 px-6 text-left my-4 sm:my-0">
+            <p className="text-l md:text-2xl py-2 px-6 text-left my-4 sm:my-0">
               Collect guided and context-rich feedback from your constituents
               about the issues that matter to them and to you.
             </p>
