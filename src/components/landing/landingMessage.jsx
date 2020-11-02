@@ -24,11 +24,9 @@ const LandingMessage = () => {
       <div className=" md:p-8 p-1 mt-3 sm:mt-10 hidden sm:flex">
         <div className="lg:p-2">
           <p className="w-full lg:text-6xl text-5xl font-medium text-left">
-            We're here so you're heard.
-          </p>
-          <p className="w-full mb-10 lg:text-5xl text-4xl font-light text-left">
             Local politics made easy, effective, & engaging.
           </p>
+
           <EmailForm />
         </div>
         <img
