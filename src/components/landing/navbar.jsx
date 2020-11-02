@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
       <div className="flex ">
         <Link
-          to="landing"
+          to="home"
           className="text-l lg:text-xl font-thin mx-3 p-1 cursor-pointer hover:bg-gray-100 nav-item"
           activeClass="active"
           spy={true}

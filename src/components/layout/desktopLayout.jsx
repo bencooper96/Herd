@@ -12,7 +12,7 @@ const DesktopLayout = () => {
     <div className="sm:block hidden overflow-hidden">
       <Navbar />
       <div>
-        <div name="landing">
+        <div name="home">
           <LandingMessage />
         </div>
         <div name="whyHerd">
