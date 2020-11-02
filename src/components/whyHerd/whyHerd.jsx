@@ -3,7 +3,7 @@ import PeopleGallery from "./peopleGallery";
 
 const WhyHerd = () => {
   return (
-    <div className="bg-district bg-cover bg-no-repeat bg-fixed w-full py-16 sm:px-20">
+    <div className="bg-primary bg-cover bg-no-repeat bg-fixed w-full py-16 sm:px-20">
       <p className="text-4xl font-bold text-center sm:text-left">
         Why we're here
       </p>
