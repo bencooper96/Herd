@@ -12,9 +12,9 @@ const colors = {
   secondary: {
     100: "#099A97",
   },
-  terciary: {
-    100: "#F1E4E4",
-  },
+  // terciary: {
+  //   100: "#F1E4E4",
+  // },
   quaternary: {
     100: "#15CDA8",
   },
@@ -28,7 +28,8 @@ const colors = {
     100: "#83778C",
   },
   accent: {
-    100: "#E8E5E5",
+    // 100: "#E8E5E5",
+    100: "#F1E4E4",
   },
   light: {
     100: "#FCFCFC",

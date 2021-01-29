@@ -11,7 +11,6 @@ import {
   Input,
 } from "@chakra-ui/react";
 
-// import HubspotForm from "react-hubspot-form";
 import { useForm } from "react-hook-form";
 import fetch from "isomorphic-unfetch";
 
@@ -24,9 +23,9 @@ export default function Home() {
       </Head>
       <main>
         <Box
-          bg="primary.100"
+          bg="dark.100"
           w={"100%"}
-          // h="100vh"
+          h="100vh"
           py={{
             base: 0,
             sm: 5,
@@ -56,38 +55,31 @@ export default function Home() {
 
 function FormContainer() {
   return (
-    <Box
+    <Center
       h={{ base: "100vh", sm: "100%" }}
-      w={{
-        base: "100vw",
-        sm: "80vw",
-        md: "45vw",
-        xl: "30vw",
-      }}
       p={{
         base: 5,
-        sm: 10,
+        sm: 7,
       }}
-      bg="light.100"
+      bg="accent.100"
       borderRadius={{ base: 0, sm: 40 }}
     >
       <VStack>
+        <Text textStyle="h2" align="center">
+          Herd
+        </Text>
+        <Text textStyle="subtitle" align="center">
+          Your Digital Townhall
+        </Text>
         <Image src="/polly.png" boxSize="40vh" alt="Polly the Parrot" />
-        <Container>
-          <Text textStyle="h2" align="center">
-            Herd
-          </Text>
-          <Text textStyle="subtitle" align="center">
-            Your Digital Townhall
-          </Text>
-          <Text textStyle="body" align="center">
-            Local politics made easy, effective, & engaging.
-          </Text>
 
-          <HubSpotForm />
-        </Container>
+        <Text textStyle="body" align="center">
+          Local politics made easy, effective, & engaging.
+        </Text>
+
+        <HubSpotForm />
       </VStack>
-    </Box>
+    </Center>
   );
 }
 
@@ -119,6 +111,7 @@ function HubSpotForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input
           placeholder="Please Enter Your Email"
+          bg="light.100"
           isInvalid={errors.email != null}
           isReadOnly={success}
           type="text"
@@ -152,15 +145,3 @@ function HubSpotForm() {
     </VStack>
   );
 }
-
-// function HubSpotForm() {
-//   return (
-//     <HubspotForm
-//       portalId="your_portal_id"
-//       formId="your_form_id"
-//       onSubmit={() => console.log("Submit!")}
-//       onReady={(form) => console.log("Form ready!")}
-//       loading={<div>Loading...</div>}
-//     />
-//   );
-// }
