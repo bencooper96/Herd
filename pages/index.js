@@ -5,11 +5,11 @@ import {
   Box,
   Center,
   VStack,
-  Image,
   Container,
   Button,
   Input,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 import { useForm } from "react-hook-form";
 import { useToast } from "@chakra-ui/react";
@@ -24,9 +24,9 @@ export default function Home() {
       </Head>
       <main>
         <Box
-          bg="dark.100"
+          bg="light.100"
           w={"100%"}
-          h="100vh"
+          minHeight="100vh"
           py={{
             base: 0,
             sm: 5,
@@ -41,7 +41,13 @@ export default function Home() {
       </main>
 
       <footer>
-        <Box bg="accent.100" w={"100%"} p={2}>
+        <Box
+          bg="light.100"
+          borderTop="1px"
+          borderColor="accent.100"
+          w={"100%"}
+          p={2}
+        >
           <Center>
             <VStack>
               <img src="/logo/monocolor.svg" alt="Herd Logo" />
@@ -72,7 +78,12 @@ function FormContainer() {
         <Text textStyle="subtitle" align="center" color="dark.100">
           Your Digital Townhall
         </Text>
-        <Image src="/polly.png" boxSize="40vh" alt="Polly the Parrot" />
+        <Image
+          src="/polly.png"
+          width="300"
+          height="300"
+          alt="Polly the Parrot"
+        />
 
         <Text textStyle="body" align="center" color="dark.100">
           Local politics made easy, effective, & engaging.
@@ -149,6 +160,7 @@ function HubSpotForm() {
           color="light.100"
           type="submit"
           isDisabled={success}
+          _hover={{ bg: "primary.200" }}
         >
           Submit
         </Button>

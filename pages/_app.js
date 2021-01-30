@@ -8,6 +8,8 @@ import { extendTheme } from "@chakra-ui/react";
 const colors = {
   primary: {
     100: "#9764C7",
+    200: "#8458AD",
+    300: "#623F8D",
   },
   secondary: {
     100: "#099A97",
