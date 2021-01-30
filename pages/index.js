@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useForm } from "react-hook-form";
+import { useToast } from "@chakra-ui/react";
 import fetch from "isomorphic-unfetch";
 
 export default function Home() {
@@ -65,15 +66,15 @@ function FormContainer() {
       borderRadius={{ base: 0, sm: 40 }}
     >
       <VStack>
-        <Text textStyle="h2" align="center">
+        <Text textStyle="h2" align="center" color="dark.100">
           Herd
         </Text>
-        <Text textStyle="subtitle" align="center">
+        <Text textStyle="subtitle" align="center" color="dark.100">
           Your Digital Townhall
         </Text>
         <Image src="/polly.png" boxSize="40vh" alt="Polly the Parrot" />
 
-        <Text textStyle="body" align="center">
+        <Text textStyle="body" align="center" color="dark.100">
           Local politics made easy, effective, & engaging.
         </Text>
 
@@ -87,6 +88,7 @@ function HubSpotForm() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const { register, handleSubmit, errors } = useForm();
+  const toast = useToast();
 
   const onSubmit = async (data) => {
     try {
@@ -100,9 +102,24 @@ function HubSpotForm() {
       });
 
       setSuccess(true);
+      toast({
+        title: "Thanks!",
+        description: "We’ll update you when we’re live.",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
     } catch (error) {
       console.log(error);
       setError(true);
+      toast({
+        title: "An error occurred.",
+        description:
+          "Something went wrong. If you're having trouble subscribing, please email us at HeardByHerd@Gmail.com",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
     }
   };
 
@@ -110,7 +127,7 @@ function HubSpotForm() {
     <VStack mt={4}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input
-          placeholder="Please Enter Your Email"
+          placeholder="Enter your email for early access"
           bg="light.100"
           isInvalid={errors.email != null}
           isReadOnly={success}
