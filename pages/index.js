@@ -72,20 +72,30 @@ function FormContainer() {
       borderRadius={{ base: 0, sm: 40 }}
     >
       <VStack>
-        <Text textStyle="h2" align="center" color="dark.100">
+        <Text
+          textStyle="h2"
+          align="center"
+          color="dark.100"
+          mt={{ base: "-10", sm: 0 }}
+        >
           Herd
         </Text>
-        <Text textStyle="subtitle" align="center" color="dark.100">
+        <Text
+          textStyle="subtitle"
+          align="center"
+          color="dark.100"
+          mb={{ base: 4 }}
+        >
           Your Digital Townhall
         </Text>
         <Image
           src="/polly.png"
-          width="300"
-          height="300"
+          width="225"
+          height="225"
           alt="Polly the Parrot"
         />
 
-        <Text textStyle="body" align="center" color="dark.100">
+        <Text textStyle="body" align="center" color="dark.100" my={{ base: 4 }}>
           Local politics made easy, effective, & engaging.
         </Text>
 
