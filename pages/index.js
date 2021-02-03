@@ -78,7 +78,7 @@ function FormContainer() {
           height="150"
           alt="Polly the Parrot"
         />
-        <Text textStyle="h2" align="center" color="dark.100">
+        <Text textStyle="h1" align="center" color="dark.100">
           Herd
         </Text>
         <Text
