@@ -71,13 +71,14 @@ function FormContainer() {
       bg="accent.100"
       borderRadius={{ base: 0, sm: 40 }}
     >
-      <VStack>
-        <Text
-          textStyle="h2"
-          align="center"
-          color="dark.100"
-          mt={{ base: "-10", sm: 0 }}
-        >
+      <VStack mt={{ base: "-20", sm: 0 }}>
+        <Image
+          src="/polly.png"
+          width="150"
+          height="150"
+          alt="Polly the Parrot"
+        />
+        <Text textStyle="h2" align="center" color="dark.100">
           Herd
         </Text>
         <Text
@@ -88,12 +89,6 @@ function FormContainer() {
         >
           Your Digital Townhall
         </Text>
-        <Image
-          src="/polly.png"
-          width="225"
-          height="225"
-          alt="Polly the Parrot"
-        />
 
         <Text textStyle="body" align="center" color="dark.100" my={{ base: 4 }}>
           Local politics made easy, effective, & engaging.
