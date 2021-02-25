@@ -129,7 +129,7 @@ const ExamplePostRow = (props) => {
           <Text pb={1} textStyle="h3" color="light">
             {subtitleText} Post
           </Text>
-          <Box p={6} pb={0} bg="light" borderRadius={20} h="full">
+          <Box p={6} bg="light" borderRadius={20} h="full">
             <Flex align="center">
               <Avatar bg="miso" icon={<Logo boxSize={7} color="fig.100" />} />
               <Text mx={2} textStyle="subtitle">
