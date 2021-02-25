@@ -21,8 +21,8 @@ export default async (req, res) => {
 
   var final_data = JSON.stringify(data);
 
-  const formGuid = "78fa930e-8e7d-4812-8b9e-0561a670c962";
-  const portalId = 8611494;
+  const formGuid = process.env.HUBSPOT_FORM_GUI;
+  const portalId = process.env.HUBSPOT_PORTAL_ID;
 
   const url = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`;
   const headers = {
