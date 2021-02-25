@@ -186,7 +186,11 @@ const ExamplePostRow = (props) => {
         {/* <SimpleGrid columns={{ md: 2, base: 1 }} spacing={{ base: 16, md: 10 }}>
           {posts}
         </SimpleGrid> */}
-        <Wrap columns={{ md: 2, base: 1 }} spacing={{ base: 16, md: 10 }}>
+        <Wrap
+          spacing={{ base: 16, md: 10 }}
+          align="flex-start"
+          justify="center"
+        >
           {posts}
         </Wrap>
       </Box>
