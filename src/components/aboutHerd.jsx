@@ -11,6 +11,8 @@ import {
   Avatar,
   Flex,
   Badge,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import { Logo } from "../svg/logos";
 import { SliderComponent, TextInputComponent } from "./inputs/postInputs";
@@ -122,40 +124,42 @@ const ExamplePostRow = (props) => {
       type == "brainstorm" ? "Brainstorm" : type == "crowdtest" && "Crowd Test";
 
     return (
-      <Box m={{ base: 0, md: 2 }} pl={5} pt={2} borderRadius={20} bg={color}>
-        <Text pb={1} textStyle="h3" color="light">
-          {subtitleText} Post
-        </Text>
-        <Box p={6} pb={0} bg="light" borderRadius={20} h="full">
-          <Flex align="center">
-            <Avatar bg="miso" icon={<Logo boxSize={7} color="fig.100" />} />
-            <Text mx={2} textStyle="subtitle">
-              Herd
-            </Text>
-          </Flex>
+      <WrapItem w="400px">
+        <Box m={{ base: 0, md: 2 }} pl={5} pt={2} borderRadius={20} bg={color}>
+          <Text pb={1} textStyle="h3" color="light">
+            {subtitleText} Post
+          </Text>
+          <Box p={6} pb={0} bg="light" borderRadius={20} h="full">
+            <Flex align="center">
+              <Avatar bg="miso" icon={<Logo boxSize={7} color="fig.100" />} />
+              <Text mx={2} textStyle="subtitle">
+                Herd
+              </Text>
+            </Flex>
 
-          <Badge m={4} mx={2} borderRadius={5} color={color}>
-            {type}
-          </Badge>
-          <Stack direction="column" spacing={5}>
-            <Text mx={2} textStyle="body">
-              {text}
-            </Text>
-            {type == "brainstorm" ? (
-              <TextInputComponent _id={_id} comments={comments} />
-            ) : (
-              type == "crowdtest" && (
-                <SliderComponent
-                  _id={_id}
-                  votes={votes}
-                  rightSliderBound={rightSliderBound}
-                  leftSliderBound={leftSliderBound}
-                />
-              )
-            )}
-          </Stack>
+            <Badge m={4} mx={2} borderRadius={5} color={color}>
+              {type}
+            </Badge>
+            <Stack direction="column" spacing={5}>
+              <Text mx={2} textStyle="body">
+                {text}
+              </Text>
+              {type == "brainstorm" ? (
+                <TextInputComponent _id={_id} comments={comments} />
+              ) : (
+                type == "crowdtest" && (
+                  <SliderComponent
+                    _id={_id}
+                    votes={votes}
+                    rightSliderBound={rightSliderBound}
+                    leftSliderBound={leftSliderBound}
+                  />
+                )
+              )}
+            </Stack>
+          </Box>
         </Box>
-      </Box>
+      </WrapItem>
     );
   };
   const posts = props.posts.map(function (post, index) {
@@ -179,9 +183,12 @@ const ExamplePostRow = (props) => {
         Types of Posts
       </Text>
       <Box p={{ lg: 20, md: 10, sm: 10, base: 5 }}>
-        <SimpleGrid columns={{ md: 2, base: 1 }} spacing={{ base: 16, md: 10 }}>
+        {/* <SimpleGrid columns={{ md: 2, base: 1 }} spacing={{ base: 16, md: 10 }}>
           {posts}
-        </SimpleGrid>
+        </SimpleGrid> */}
+        <Wrap columns={{ md: 2, base: 1 }} spacing={{ base: 16, md: 10 }}>
+          {posts}
+        </Wrap>
       </Box>
     </Box>
   );
