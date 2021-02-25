@@ -65,7 +65,7 @@ function Links() {
                       to="about-herd"
                       onClick={() => onClose()}
                     >
-                      About the App
+                      About Herd
                     </Scroll.Link>
                     {/* <Link href="#how-it-works">About the App</Link> */}
                   </ListItem>
@@ -89,7 +89,7 @@ function Links() {
                   </ListItem> */}
                   <ListItem>
                     <Link href="https://herd-oklahoma.app" isExternal>
-                      We're live in Oklahoma! <ExternalLinkIcon mx="2px" />
+                      App <ExternalLinkIcon mx="2px" />
                     </Link>
                   </ListItem>
                 </List>
@@ -129,7 +129,7 @@ function Links() {
 
 function NavigationBar() {
   return (
-    <Box w="100%" p={3} bg="light" boxShadow="md" position="fixed" zIndex={40}>
+    <Box w="100vw" p={3} bg="light" boxShadow="md" position="fixed" zIndex={40}>
       <Flex alignItems="center">
         <Box _hover={{ cursor: "pointer" }}>
           <Scroll.Link smooth={true} to="home">
