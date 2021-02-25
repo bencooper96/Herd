@@ -31,18 +31,16 @@ function Home({ data }) {
 }
 
 // This function gets called at build time
-export async function getStaticProps() {
+Home.getInitialProps = async (ctx) => {
   // Call an API endpoint to get data from mongoDB database
+
   const res = await fetch(`${server}/api/post`);
   const { data } = await res.json();
 
-  // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
   return {
-    props: {
-      data,
-    },
+    data,
   };
-}
+};
 
 export default Home;
