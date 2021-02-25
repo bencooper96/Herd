@@ -18,8 +18,10 @@ export default async (req, res) => {
           { $push: { votes: req.body } }
         );
         res.status(200).json({ success: true, data: post });
+        return;
       } catch (error) {
         res.status(400).json({ success: false });
+        return;
       }
       break;
     case "comments":
@@ -29,10 +31,14 @@ export default async (req, res) => {
           { $push: { comments: req.body } }
         );
         res.status(200).json({ success: true, data: post });
+        return;
       } catch (error) {
         res.status(400).json({ success: false });
+        return;
       }
+      break;
   }
 
   res.status(400).json({ success: false, error: "invalid method" });
+  return;
 };

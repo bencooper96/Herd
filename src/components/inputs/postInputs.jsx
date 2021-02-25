@@ -15,6 +15,7 @@ import {
   InputGroup,
   InputRightElement,
   chakra,
+  Flex,
 } from "@chakra-ui/react";
 
 function SliderComponent(props) {
@@ -98,6 +99,14 @@ function SliderComponent(props) {
 
   return (
     <Box>
+      <Flex justify="space-between">
+        <Text align="left" textStyle="small">
+          {props.leftSliderBound ? props.leftSliderBound : "disagree"}
+        </Text>
+        <Text align="right" textStyle="small">
+          {props.rightSliderBound ? props.rightSliderBound : "agree"}
+        </Text>
+      </Flex>
       {success ? (
         <>
           <VoteChart />

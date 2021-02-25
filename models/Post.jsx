@@ -20,6 +20,16 @@ const PostSchema = new mongoose.Schema({
     default: [],
   },
   isShown: { type: Boolean },
+  rightSliderBound: {
+    type: String,
+    required: false,
+    unique: false,
+  },
+  leftSliderBound: {
+    type: String,
+    required: false,
+    unique: false,
+  },
 });
 
 module.exports = mongoose.models.Post || mongoose.model("Post", PostSchema);

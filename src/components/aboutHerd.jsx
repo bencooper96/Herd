@@ -106,7 +106,15 @@ const ExplainerRow = () => {
 };
 
 const ExamplePostRow = (props) => {
-  const ExamplePost = ({ text, type, votes, comments, _id }) => {
+  const ExamplePost = ({
+    text,
+    type,
+    votes,
+    comments,
+    _id,
+    rightSliderBound,
+    leftSliderBound,
+  }) => {
     const color =
       type == "brainstorm" ? "fig.100" : type == "crowdtest" && "broccoli.100";
 
@@ -136,7 +144,14 @@ const ExamplePostRow = (props) => {
             {type == "brainstorm" ? (
               <TextInputComponent _id={_id} comments={comments} />
             ) : (
-              type == "crowdtest" && <SliderComponent _id={_id} votes={votes} />
+              type == "crowdtest" && (
+                <SliderComponent
+                  _id={_id}
+                  votes={votes}
+                  rightSliderBound={rightSliderBound}
+                  leftSliderBound={leftSliderBound}
+                />
+              )
             )}
           </Stack>
         </Box>
@@ -152,6 +167,8 @@ const ExamplePostRow = (props) => {
         votes={post.votes}
         comments={post.comments}
         _id={post._id}
+        rightSliderBound={post.rightSliderBound}
+        leftSliderBound={post.leftSliderBound}
       />
     );
   });
