@@ -121,7 +121,7 @@ function SliderComponent(props) {
             onChangeEnd={handleInput}
           >
             <SliderTrack
-              bgGradient="linear(to-r,fig.100,broccoli.100)"
+              bgGradient="linear(to-r,fig.500,broccoli.500)"
               boxSize={8}
               borderRadius={32}
               boxShadow="lg"
@@ -183,9 +183,9 @@ function TextInputComponent(props) {
         <InputRightElement width="4.5rem">
           <Button
             borderRadius={100}
-            bg="fig.200"
+            bg="fig.600"
             color="light"
-            _hover={{ bg: "fig.100" }}
+            _hover={{ bg: "fig.500" }}
             type="submit"
             disabled={success}
           >
@@ -200,7 +200,7 @@ function TextInputComponent(props) {
         </Text>
       )}
       {success && (
-        <Text align="center" color="broccoli.100">
+        <Text align="center" color="broccoli.500">
           Success! Thanks for your input!
         </Text>
       )}

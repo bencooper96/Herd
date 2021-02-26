@@ -6,7 +6,7 @@ import AboutTheAppSection from "../src/components/aboutHerd";
 import MissionSection from "../src/components/mission";
 import AboutUsSection from "../src/components/aboutUs";
 import Footer from "../src/components/footer";
-import { Box } from "@chakra-ui/react";
+import { Box, Divider } from "@chakra-ui/react";
 
 function Home({ data }) {
   const examplePosts = data.filter(
@@ -24,7 +24,8 @@ function Home({ data }) {
       <LandingSection />
       <AboutTheAppSection posts={examplePosts} />
       <MissionSection />
-      {/* <AboutUsSection /> */}
+      <Divider />
+      <AboutUsSection />
       <Footer />
     </>
   );

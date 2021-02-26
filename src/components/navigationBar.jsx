@@ -52,7 +52,7 @@ function Links() {
               <DrawerHeader
                 textStyle="h3"
                 borderBottom="1px"
-                borderColor="fig.500"
+                borderColor="fig.900"
               >
                 Navigation
               </DrawerHeader>
@@ -67,7 +67,6 @@ function Links() {
                     >
                       About Herd
                     </Scroll.Link>
-                    {/* <Link href="#how-it-works">About the App</Link> */}
                   </ListItem>
                   <ListItem>
                     <Scroll.Link
@@ -78,7 +77,7 @@ function Links() {
                       Mission
                     </Scroll.Link>
                   </ListItem>
-                  {/* <ListItem>
+                  <ListItem>
                     <Scroll.Link
                       smooth={true}
                       to="about-us"
@@ -86,7 +85,7 @@ function Links() {
                     >
                       About Us
                     </Scroll.Link>
-                  </ListItem> */}
+                  </ListItem>
                   <ListItem>
                     <Link href="https://herd-oklahoma.app" isExternal>
                       App <ExternalLinkIcon mx="2px" />
@@ -114,11 +113,11 @@ function Links() {
           Mission
         </Scroll.Link>
       </Box>
-      {/* <Box _hover={{ textDecoration: "underline", cursor: "pointer" }}>
+      <Box _hover={{ textDecoration: "underline", cursor: "pointer" }}>
         <Scroll.Link smooth={true} to="about-us">
           About Us
         </Scroll.Link>
-      </Box> */}
+      </Box>
       <Divider orientation="vertical" />
       <Link href="https://herd-oklahoma.app" isExternal>
         App <ExternalLinkIcon mx="2px" />

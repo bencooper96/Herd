@@ -6,6 +6,7 @@ import {
   Circle,
   Container,
   Center,
+  chakra,
   SimpleGrid,
   Grid,
   Avatar,
@@ -13,22 +14,23 @@ import {
   Badge,
   Wrap,
   WrapItem,
+  Tooltip,
 } from "@chakra-ui/react";
 import { Logo } from "../svg/logos";
 import { SliderComponent, TextInputComponent } from "./inputs/postInputs";
 
-const copy = [
-  { title: "Post", body: "You create either a poll or an open-ended question" },
-  {
-    title: "Engage",
-    body: "The Herd votes, comments, and discusses the topic in a civil manner",
-  },
-  {
-    title: "Outcome",
-    body:
-      "State & Local elected officials learn about new policy ideas and how their constituents feel about issues",
-  },
-];
+// const copy = [
+//   { title: "Post", body: "You create either a poll or an open-ended question" },
+//   {
+//     title: "Engage",
+//     body: "The Herd votes, comments, and discusses the topic in a civil manner",
+//   },
+//   {
+//     title: "Outcome",
+//     body:
+//       "State & Local elected officials learn about new policy ideas and how their constituents feel about issues",
+//   },
+// ];
 
 function AboutTheAppSection(props) {
   const { posts } = props;
@@ -36,8 +38,10 @@ function AboutTheAppSection(props) {
   return (
     <>
       <TopWave />
+      <UseCases />
       <ExplainerRow />
       <ExamplePostRow posts={posts} />
+      {/* <WhyHerd /> */}
       <BottomWave />
     </>
   );
@@ -46,63 +50,171 @@ function AboutTheAppSection(props) {
 const TopWave = () => {
   return (
     <Box
+      direction="column"
+      align="center"
+      spacing={20}
       id="about-herd"
       backgroundImage="url('/img/hiwTop.png')"
       backgroundPosition="top"
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
       pt={{ base: 48, md: 64 }}
-      pb={{ base: 64, md: 64 }}
+      pb={{ base: 32, md: 40 }}
     >
       <Text textStyle={{ base: "h3", md: "h2" }} textAlign="center" px={12}>
-        Herd is a social polling tool that centralizes communication between
-        politicians and their constituents.
+        Herd is a free, bipartisan, user-friendly polling tool for State
+        Representatives to get real-time feedback.
+      </Text>
+    </Box>
+  );
+};
+
+const UseCases = () => {
+  const FlexCircleGrow = () => {
+    return (
+      <Center>
+        <Flex justify="center" align="center" h={450}>
+          <Box
+            bg="fig.500"
+            color="light"
+            borderRadius="full"
+            align="center"
+            justify="center"
+            minW="250px"
+            minH="250px"
+            style={{ transition: "all .9s ease-in-out" }}
+            _hover={{ w: "450px", h: "450px" }}
+          >
+            hello
+          </Box>
+          <Box
+            bg="fig.600"
+            borderRadius="full"
+            align="center"
+            justify="center"
+            color="light"
+            minW="250px"
+            minH="250px"
+            transition="1000ms"
+            _hover={{ w: "450px", h: "450px" }}
+          >
+            hello
+          </Box>
+          <Box
+            bg="fig.800"
+            borderRadius="full"
+            align="center"
+            justify="center"
+            color="light"
+            minW="250px"
+            minH="250px"
+            _hover={{ w: "450px", h: "450px" }}
+          >
+            hello
+          </Box>
+        </Flex>
+      </Center>
+    );
+  };
+
+  return (
+    <Box bg="broccoli.700" p={{ lg: 20, base: 10 }} pb={40} mt={-2}>
+      <Box p={{ lg: 20, base: 10 }} p={0}>
+        <Text textStyle="h3" mb={{ base: 5, md: 10 }} textAlign="center">
+          You can use Herd to...
+        </Text>
+        {/* <FlexCircleGrow /> */}
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          justify="space-around"
+          align="center"
+          p={10}
+          pb={20}
+          spacing={5}
+        >
+          <Circle
+            bg="fig.900"
+            p={6}
+            size="200px"
+            _hover={{ size: "250", boxShadow: "dark-lg" }}
+          >
+            <Text textStyle="subtitle" textAlign="center">
+              Learn more about policy
+            </Text>
+          </Circle>
+          <Circle
+            bg="fig.900"
+            p={6}
+            size="200px"
+            _hover={{ size: "250", boxShadow: "dark-lg" }}
+          >
+            <Text textStyle="subtitle" textAlign="center">
+              Discuss policy ideas
+            </Text>
+          </Circle>
+          <Circle
+            bg="fig.900"
+            p={6}
+            size="200px"
+            _hover={{ size: "250", boxShadow: "dark-lg" }}
+          >
+            <Text textStyle="subtitle" textAlign="center">
+              Contribute to policy decisions
+            </Text>
+          </Circle>
+        </Stack>
+      </Box>
+
+      <Text textStyle="subtitle" textAlign="center">
+        Herd is an easy way to make a difference in your community and
+        participate in policy that affects all of us.
       </Text>
     </Box>
   );
 };
 
 const ExplainerRow = () => {
-  const ContentCard = (props) => {
-    const { source, index } = props;
-    const bgColors = ["fig.300", "broccoli.500", "fig.500"];
-    return (
-      <Container maxW="xs" p={5} bg="light" borderRadius={20}>
-        <Stack direction="row" textStyle="h3">
-          <Circle bg={bgColors[index]} size="40px">
-            <Text>{index + 1}</Text>
-          </Circle>
-          <Text>{source.title}</Text>
-        </Stack>
-        <Text mt={4} textStyle="body">
-          {source.body}
-        </Text>
-      </Container>
-    );
-  };
+  // const ContentCard = (props) => {
+  //   const { source, index } = props;
+  //   const bgColors = ["fig.700", "broccoli.900", "fig.500"];
+  //   return (
+  //     <Container maxW="xs" p={5} bg="light" borderRadius={20}>
+  //       <Stack direction="row" textStyle="h3">
+  //         <Circle bg={bgColors[index]} size="40px">
+  //           <Text>{index + 1}</Text>
+  //         </Circle>
+  //         <Text>{source.title}</Text>
+  //       </Stack>
+  //       <Text mt={4} textStyle="body">
+  //         {source.body}
+  //       </Text>
+  //     </Container>
+  //   );
+  // };
 
-  const contentCards = copy.map(function (item, index) {
-    return <ContentCard source={item} index={index} key={index} />;
-  });
+  // const contentCards = copy.map(function (item, index) {
+  //   return <ContentCard source={item} index={index} key={index} />;
+  // });
 
   return (
-    <Box bg="broccoli.300" p={{ lg: 20, base: 10 }} pt={0} mt={-2}>
-      <Text
-        textStyle="h2"
-        mb={{ base: 5, md: 10 }}
-        textAlign={{ base: "center", md: "left" }}
-      >
+    <Box bg="broccoli.700" p={{ lg: 20, base: 10 }} py={0} mt={-2}>
+      <Text textStyle="h2" textAlign={{ base: "center", md: "left" }}>
         How it works
       </Text>
-      <Center>
-        <Stack
-          direction={{ md: "row", base: "column" }}
-          justify={{ base: "space-between" }}
-          spacing={{ base: 5 }}
+
+      <Text textStyle="subtitle" textAlign={{ base: "center", md: "left" }}>
+        Using our <strong>brainstorming posts</strong>, State reps can generate
+        ideas for new bills pre-session. Using our{" "}
+        <strong>crowdtesting posts</strong>, State Reps can make constituent
+        informed decisions about{" "}
+        <Tooltip
+          label="This session, State Reps in Oklahoma will vote on 3,000 bills. Looping constituents into that many bills requires a powerful tool - Herd"
+          hasArrow
+          closeDelay={500}
         >
-          {contentCards}
-        </Stack>
-      </Center>
+          <u> bills that they are voting on during session.</u>
+        </Tooltip>{" "}
+      </Text>
     </Box>
   );
 };
@@ -118,7 +230,7 @@ const ExamplePostRow = (props) => {
     leftSliderBound,
   }) => {
     const color =
-      type == "brainstorm" ? "fig.100" : type == "crowdtest" && "broccoli.100";
+      type == "brainstorm" ? "fig.500" : type == "crowdtest" && "broccoli.500";
 
     const subtitleText =
       type == "brainstorm" ? "Brainstorm" : type == "crowdtest" && "Crowd Test";
@@ -129,9 +241,16 @@ const ExamplePostRow = (props) => {
           <Text pb={1} textStyle="h3" color="light">
             {subtitleText} Post
           </Text>
-          <Box p={6} bg="light" borderRadius={20} h="full">
+          <Box
+            p={6}
+            mb="2"
+            bg="light"
+            borderRadius={20}
+            h="full"
+            // _hover={{ ml: 1, mr: -1, boxShadow: "xl" }}
+          >
             <Flex align="center">
-              <Avatar bg="miso" icon={<Logo boxSize={7} color="fig.100" />} />
+              <Avatar bg="miso" icon={<Logo boxSize={7} color="fig.500" />} />
               <Text mx={2} textStyle="subtitle">
                 Herd
               </Text>
@@ -178,22 +297,28 @@ const ExamplePostRow = (props) => {
   });
 
   return (
-    <Box bg="broccoli.300" pt={24} mt={-2}>
-      <Text px={{ lg: 20, base: 10 }} textStyle="h2">
-        Types of Posts
-      </Text>
-      <Box p={{ lg: 20, md: 10, sm: 10, base: 5 }}>
-        {/* <SimpleGrid columns={{ md: 2, base: 1 }} spacing={{ base: 16, md: 10 }}>
+    <Box bg="broccoli.700" p={{ lg: 20, base: 10 }} mt={-2}>
+      {/* <SimpleGrid columns={{ md: 2, base: 1 }} spacing={{ base: 16, md: 10 }}>
           {posts}
         </SimpleGrid> */}
-        <Wrap
-          spacing={{ base: 16, md: 10 }}
-          align="flex-start"
-          justify="center"
-        >
-          {posts}
-        </Wrap>
-      </Box>
+      <Wrap spacing={{ base: 16, md: 10 }} align="flex-start" justify="center">
+        {posts}
+      </Wrap>
+    </Box>
+  );
+};
+
+const WhyHerd = () => {
+  return (
+    <Box
+      bg="broccoli.700"
+      p={{ lg: 20, md: 10, sm: 10, base: 5 }}
+      pt={0}
+      mt={-2}
+    >
+      <Text textStyle="h2" textAlign={{ base: "center", md: "left" }}>
+        Why Herd is better than social media for policy conversations
+      </Text>
     </Box>
   );
 };
@@ -206,6 +331,7 @@ const BottomWave = () => {
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
       pt={{ base: 32, md: 64 }}
+      mt={-2}
     />
   );
 };
