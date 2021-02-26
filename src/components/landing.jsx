@@ -63,7 +63,7 @@ function LandingCopy() {
       mt={{ lg: 0, md: 20 }}
     >
       <VStack>
-        <Box mb={6}>
+        <Box mb={8}>
           <Text textStyle="h1">Your digital townhall</Text>
           <Text textStyle="subtitle">
             Local politics made easy, effective, & engaging

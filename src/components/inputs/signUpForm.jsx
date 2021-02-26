@@ -58,12 +58,15 @@ function HubSpotForm() {
   return (
     <VStack width="100%">
       <chakra.form width="100%" onSubmit={handleSubmit(onSubmit)}>
+        <Text textStyle="body" pb={1}>
+          Stay Updated
+        </Text>
         <InputGroup size="lg">
           <Input
             color="primary"
             borderRadius={1000}
             variant="filled"
-            placeholder="Enter your email to stay updated"
+            placeholder="Email address"
             isInvalid={errors.email != null}
             isReadOnly={success}
             type="text"
