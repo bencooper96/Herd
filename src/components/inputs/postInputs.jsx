@@ -21,12 +21,15 @@ import {
 function SliderComponent(props) {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(null);
   let votes = props.votes;
 
   function handleInput(val) {
+    setIsSubmitting(true);
     let data = { vote: val, timestamp: new Date() };
     onSubmit(data);
     votes.push(data);
+    setIsSubmitting(false);
   }
 
   const onSubmit = async (data) => {
@@ -107,7 +110,7 @@ function SliderComponent(props) {
           {props.rightSliderBound ? props.rightSliderBound : "agree"}
         </Text>
       </Flex>
-      {success ? (
+      {success || isSubmitting ? (
         <>
           <VoteChart />
           <Text align="right" textStyle="small">{`${votes.length} votes`}</Text>

@@ -209,8 +209,9 @@ const ExplainerRow = () => {
         informed decisions about{" "}
         <Tooltip
           label="This session, State Reps in Oklahoma will vote on 3,000 bills. Looping constituents into that many bills requires a powerful tool - Herd"
-          hasArrow
+          aria-label="This session, State Reps in Oklahoma will vote on 3,000 bills. Looping constituents into that many bills requires a powerful tool - Herd"
           closeDelay={500}
+          placement="bottom-end"
         >
           <u> bills that they are voting on during session.</u>
         </Tooltip>{" "}
