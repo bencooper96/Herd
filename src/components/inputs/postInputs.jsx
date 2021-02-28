@@ -26,10 +26,10 @@ function SliderComponent(props) {
 
   function handleInput(val) {
     setIsSubmitting(true);
-    let data = { vote: val, timestamp: new Date() };
+    const roundedVal = Math.round(val / 10) * 10;
+    let data = { vote: roundedVal, timestamp: new Date() };
     onSubmit(data);
     votes.push(data);
-    setIsSubmitting(false);
   }
 
   const onSubmit = async (data) => {
@@ -120,8 +120,9 @@ function SliderComponent(props) {
           <Slider
             aria-label="Agreement-Slider"
             defaultValue={50}
-            step={10}
+            // step={10}
             onChangeEnd={handleInput}
+            disabled={isSubmitting}
           >
             <SliderTrack
               bgGradient="linear(to-r,fig.500,broccoli.500)"

@@ -18,7 +18,7 @@ const colors = {
   mushroom: "#F1E4E4",
   lime: "#15CDA8",
   dark: "#372448",
-  text: "#514160",
+  text: "#3C2F48",
   oyster: "#83778C",
   miso: "#E8E5E5",
   light: "#FCFCFC",
