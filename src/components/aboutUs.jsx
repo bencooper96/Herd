@@ -5,7 +5,7 @@ import { Box, Center, Text, Image, Stack, Wrap } from "@chakra-ui/react";
 export default function AboutUsSection() {
   return (
     <Box bg="light" p={{ md: 20, base: 4 }} py={40} id="about-us">
-      <Text textStyle="h2">About Us</Text>
+      <Text textStyle="h2">Our Team</Text>
       <Wrap justify="space-around" mt={10}>
         <AboutBenCard />
         <AboutSebCard />

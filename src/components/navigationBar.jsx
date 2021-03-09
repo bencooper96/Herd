@@ -83,7 +83,7 @@ function Links() {
                       to="about-us"
                       onClick={() => onClose()}
                     >
-                      About Us
+                      Our Team
                     </Scroll.Link>
                   </ListItem>
                   <ListItem>
@@ -115,7 +115,7 @@ function Links() {
       </Box>
       <Box _hover={{ textDecoration: "underline", cursor: "pointer" }}>
         <Scroll.Link smooth={true} to="about-us">
-          About Us
+          Our Team
         </Scroll.Link>
       </Box>
       <Divider orientation="vertical" />
