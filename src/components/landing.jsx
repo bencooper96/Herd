@@ -45,9 +45,8 @@ const MobileLayout = () => {
 
 function LandingImage() {
   return (
-    <Box width={{ lg: "43%", md: "40%" }}>
+    <Box width={{ lg: "43%", md: "40%" }} pt={{ lg: 10, md: 18 }}>
       <Image
-        mt={{ lg: 10, md: 18 }}
         src="/img/landing.png"
         alt="Picture of animal characters in discussion"
       />
