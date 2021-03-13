@@ -1,10 +1,9 @@
 import React from "react";
-
+import Image from "next/image";
 import {
   Box,
   Flex,
   Spacer,
-  Image,
   Text,
   Center,
   VStack,
@@ -49,6 +48,8 @@ function LandingImage() {
       <Image
         src="/img/landing.png"
         alt="Picture of animal characters in discussion"
+        width="615px"
+        height="815px"
       />
     </Box>
   );

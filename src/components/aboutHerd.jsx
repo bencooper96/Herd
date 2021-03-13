@@ -19,19 +19,6 @@ import {
 import { Logo } from "../svg/logos";
 import { SliderComponent, TextInputComponent } from "./inputs/postInputs";
 
-// const copy = [
-//   { title: "Post", body: "You create either a poll or an open-ended question" },
-//   {
-//     title: "Engage",
-//     body: "The Herd votes, comments, and discusses the topic in a civil manner",
-//   },
-//   {
-//     title: "Outcome",
-//     body:
-//       "State & Local elected officials learn about new policy ideas and how their constituents feel about issues",
-//   },
-// ];
-
 function AboutTheAppSection(props) {
   const { posts } = props;
 
