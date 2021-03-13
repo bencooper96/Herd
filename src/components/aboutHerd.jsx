@@ -62,7 +62,7 @@ const TopWave = () => {
       pb={{ base: 32, md: 40 }}
     >
       <Text textStyle={{ base: "h3", md: "h2" }} textAlign="center" px={12}>
-        Herd is a free, multipartisan, user-friendly polling tool for State
+        Herd is a free, nonpartisan, user-friendly polling tool for State
         Representatives to get real-time feedback.
       </Text>
     </Box>
