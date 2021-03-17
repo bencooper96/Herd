@@ -31,9 +31,9 @@ const Mission = () => {
         Our Mission
       </Text>
       <Text textStyle="body">
-        We want to make constructive, thoughtful policy conversations - that
-        teach and generate policy solutions - accessible for constituents. Then
-        we aim to place that feedback directly in the hands of policymakers.
+        We want to make constructive, thoughtful conversations – that teach and
+        generate policy solutions - accessible for constituents and informative
+        for policymakers.
       </Text>
     </Box>
   );
