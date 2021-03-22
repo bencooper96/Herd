@@ -193,15 +193,7 @@ const ExplainerRow = () => {
         Using our <strong>brainstorming posts</strong>, State reps can generate
         ideas for new bills pre-session. Using our{" "}
         <strong>crowdtesting posts</strong>, State Reps can make constituent
-        informed decisions about{" "}
-        <Tooltip
-          label="This session, State Reps in Oklahoma will vote on 3,000 bills. Looping constituents into that many bills requires a powerful tool - Herd"
-          aria-label="This session, State Reps in Oklahoma will vote on 3,000 bills. Looping constituents into that many bills requires a powerful tool - Herd"
-          closeDelay={500}
-          placement="bottom-end"
-        >
-          <u> bills that they are voting on during session.</u>
-        </Tooltip>{" "}
+        informed decisions about bills that they are voting on during session.
       </Text>
     </Box>
   );

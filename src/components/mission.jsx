@@ -30,7 +30,7 @@ const Mission = () => {
       <Text textStyle="h2" mb={5}>
         Our Mission
       </Text>
-      <Text textStyle="body">
+      <Text textStyle="subtitle">
         We want to make constructive, thoughtful conversations – that teach and
         generate policy solutions - accessible for constituents and informative
         for policymakers.
