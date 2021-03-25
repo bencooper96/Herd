@@ -48,7 +48,7 @@ function LandingImage() {
       <Image
         src="/img/landing.png"
         alt="Picture of animal characters in discussion"
-        width="650px"
+        width="710px"
         height="815px"
       />
     </Box>
