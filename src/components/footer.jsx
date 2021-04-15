@@ -44,7 +44,7 @@ export default function Footer() {
       <Stack direction="column" align="center" py={10}>
         <Logo color="light" boxSize={12} />
         <Text color="light" textStyle="bold">
-          HeardByHeard@Gmail.com
+          hello@joinherd.us
         </Text>
         <Flex>{socialElements}</Flex>
       </Stack>
