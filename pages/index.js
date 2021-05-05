@@ -19,14 +19,26 @@ function Home({ data }) {
       <Head>
         <title>Herd</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charset="UTF-8" />
+        <meta
+          name="description"
+          content="Local politics made easy, effective, and engaging"
+        />
+        <meta
+          name="keywords"
+          content="Politics, Local, Voting, Bills, Legislation, Vote, Herd, Democracy, Voice, Heard"
+        />
+        <meta name="author" content="Herd" />
       </Head>
-      <NavigationBar />
-      <LandingSection />
-      <AboutTheAppSection posts={examplePosts} />
-      <MissionSection />
-      <Divider />
-      <AboutUsSection />
-      <Footer />
+      <main>
+        <NavigationBar />
+        <LandingSection />
+        <AboutTheAppSection posts={examplePosts} />
+        <MissionSection />
+        <Divider />
+        <AboutUsSection />
+        <Footer />
+      </main>
     </>
   );
 }
